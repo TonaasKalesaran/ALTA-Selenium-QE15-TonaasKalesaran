@@ -9,6 +9,7 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+    //xpath bisa diganti id, name, username, class, etc.
     @FindBy(xpath = "//input[@id='user-name']")
     private WebElement fieldUserName;
     @FindBy(xpath = "//input[@id='password']")
@@ -20,11 +21,14 @@ public class LoginPage extends BasePage {
 
 
     public void inputFieldUserName(String userName){
+        //sendKeys diambil dari elemen line 14(yg private dll), userName dari String username line diatas^
         sendKeys(fieldUserName, userName);
     }
+
     public void inputFieldPassword(String password){
         sendKeys(fieldPassword, password);
     }
+
     public void clickButtonLogin(){
         scrollIntoView(buttonLogin);
         waitForElementClickable(buttonLogin);

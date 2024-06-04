@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginSteps {
     private final WebDriver driver = Hooks.driver;
     LoginPage loginPage = new LoginPage(driver);
+
     @Given("User open the web sauce demo")
     public void userOpenTheWebSauceDemo() {
         Assert.assertTrue(loginPage.verifyLoginPage());
