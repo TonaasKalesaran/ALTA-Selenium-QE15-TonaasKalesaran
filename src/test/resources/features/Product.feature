@@ -7,3 +7,4 @@ Feature: Product Test
     And Click Add to cart saucelabs backpack
     And Remove button on the saucelabs backpack is displayed
     # And Remove the saucelabs backpack from product list
+

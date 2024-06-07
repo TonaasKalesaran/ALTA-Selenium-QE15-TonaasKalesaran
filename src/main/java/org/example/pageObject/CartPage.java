@@ -13,8 +13,33 @@ public class CartPage extends BasePage {
     @FindBy(id ="checkout")
     private WebElement btnCheckout;
 
+    //remove button on cart page
+    @FindBy(id = "remove-test.allthethings()-t-shirt-(red)")
+    private WebElement cartRemoveShirtRed;
+
+    //continue shopping button
+    @FindBy(id = "continue-shopping")
+    private WebElement btnContinueShopping;
+
     public void clickCheckout(){
         waitForElementClickable(btnCheckout);
         click(btnCheckout);
     }
+
+    public boolean verifyCartRemoveButtonDisplayedOnProductShirtRed(){
+        return isDisplayed(cartRemoveShirtRed);
+    }
+
+    public void clickCartRemoveProductShirtRed(){
+        scrollIntoView(cartRemoveShirtRed);          //biar layarnya discroll sampai buttonnya terlihat
+        waitForElementClickable(cartRemoveShirtRed); //nunggu sampai buttonnya bisa di click
+        click(cartRemoveShirtRed);                   //click buttonnya
+    }
+
+    public void clickContinueShopping(){
+        waitForElementClickable(btnContinueShopping);
+        click(btnContinueShopping);
+    }
+
+
 }

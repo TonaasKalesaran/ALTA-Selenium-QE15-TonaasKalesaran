@@ -10,11 +10,12 @@ import org.junit.runner.RunWith;
                 "hooks",
                 "step_definitions"
         },
-        features = {"classpath:features/checkout.feature"},      //features = {"classpath:features/"},
+        features = {"classpath:features/ContinueShopping.feature"},      //features = {"classpath:features/"},
         plugin = {"pretty",
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
-        }
+        },
+        tags  = "@continueShopping"
         //tags = "@regression or @smoketest", untuk tes certain fitur aja, dipakai di features(contoh di login.feature)
 )
 public class RunCukesTest {
