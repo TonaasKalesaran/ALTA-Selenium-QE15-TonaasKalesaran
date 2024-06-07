@@ -1,5 +1,5 @@
 Feature: Continue Shopping Test
-  @continueShopping
+  @tugasFull
   Scenario: Sort product saucelabs backpack and add 2 products saucelabs backpack
     When User login with valid username "standard_user" and password "secret_sauce"
     And Click sort and choose Z to A
@@ -14,4 +14,6 @@ Feature: Continue Shopping Test
     And Click cart icon
     And Remove button on the cart shirt red is displayed
     And Click remove button on the shirt red
-    Then Click continue shopping button
+    #And Verify item is deleted
+    And Click continue shopping button
+    Then User should be directed to the dashboard page

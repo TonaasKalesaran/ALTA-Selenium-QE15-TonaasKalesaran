@@ -37,6 +37,11 @@ public class CartPage extends BasePage {
     }
 
     public void clickContinueShopping(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         waitForElementClickable(btnContinueShopping);
         click(btnContinueShopping);
     }
