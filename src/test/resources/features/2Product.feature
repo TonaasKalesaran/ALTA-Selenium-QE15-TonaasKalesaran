@@ -8,7 +8,7 @@ Feature: Product Test
     And Remove button on the saucelabs backpack is displayed
     # And Remove the saucelabs backpack from product list
 
-  @tugas1
+  @tugas
   Scenario: Add 2 items
     When User login with valid username "standard_user" and password "secret_sauce"
     And Click sort and choose Z to A

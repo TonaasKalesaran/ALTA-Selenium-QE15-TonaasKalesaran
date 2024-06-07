@@ -1,5 +1,5 @@
 Feature: Cart Test
-  @tugas2
+  @tugas
   Scenario: Remove item from cart then continue shopping
     When User login with valid username "standard_user" and password "secret_sauce"
     And Click Add to cart onesie

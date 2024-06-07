@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
         },
-        tags  = "@tugas1 or @tugas2"
+        tags  = "@tugasFull"
         //tags = "@regression or @smoketest", untuk tes certain fitur aja, dipakai di features(contoh di login.feature)
 )
 public class RunCukesTest {
