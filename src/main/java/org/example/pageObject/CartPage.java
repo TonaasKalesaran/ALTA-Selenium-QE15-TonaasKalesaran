@@ -21,6 +21,9 @@ public class CartPage extends BasePage {
     @FindBy(id = "continue-shopping")
     private WebElement btnContinueShopping;
 
+    @FindBy(id = "item_3_title_link")
+    private WebElement titleProductShirtRed;
+
     public void clickCheckout(){
         waitForElementClickable(btnCheckout);
         click(btnCheckout);
@@ -36,15 +39,21 @@ public class CartPage extends BasePage {
         click(cartRemoveShirtRed);                   //click buttonnya
     }
 
+    public boolean verifyShirtRedIsRemoved(){
+        return isDisplayed(titleProductShirtRed);
+    }
+
     public void clickContinueShopping(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        give delay
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         waitForElementClickable(btnContinueShopping);
         click(btnContinueShopping);
     }
+
 
 
 }

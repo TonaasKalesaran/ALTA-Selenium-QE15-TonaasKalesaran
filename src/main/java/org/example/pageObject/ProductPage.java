@@ -80,11 +80,12 @@ public class ProductPage extends BasePage {
     }
 
     public void clickCart(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//give delay
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         waitForElementClickable(cart);
         click(cart);
     }
@@ -92,11 +93,12 @@ public class ProductPage extends BasePage {
     public void clickSortZA(){
         waitForElementClickable(sort);
         click(sort);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        //give delay
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         click(sortZA);
     }
 

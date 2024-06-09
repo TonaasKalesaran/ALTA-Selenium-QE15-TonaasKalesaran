@@ -12,6 +12,7 @@ Feature: Continue Shopping Test
     And Remove button on the shirt red is displayed
     And Remove button on the onesie is displayed
     And Click cart icon
+    And On the product page verify the shirt red is displayed
     And Remove button on the cart shirt red is displayed
     And Click remove button on the shirt red
     #And Verify item is deleted

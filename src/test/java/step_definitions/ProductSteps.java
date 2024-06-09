@@ -6,7 +6,9 @@ import io.cucumber.java.en.Then;
 import org.example.pageObject.CartPage;
 import org.example.pageObject.ProductPage;
 import org.junit.Assert;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+
 
 public class ProductSteps {
 
@@ -96,7 +98,21 @@ public class ProductSteps {
         Assert.assertTrue(productPage.verifyTitleProductOnesie());
     }
 
+    //check if the item is deleted
+    public boolean verifyRemovedProduct(){
+        try {
+            cartPage.verifyShirtRedIsRemoved();
+            return true;
+        }catch (TimeoutException e){
+            return false;
+        }
+    }
 
+    //unused because it takes too long
+    @And("Verify item is deleted")
+    public void verifyItemIsDeleted() {
+        Assert.assertFalse(verifyRemovedProduct());
+    }
 
 //    @And("Remove the saucelabs backpack from product list")
 //    public void removeTheSaucelabsBackpackFromProductList() {
